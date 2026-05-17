@@ -13,6 +13,7 @@ app.use('/api/catalogos', require('./routes/catalogos.routes'));
 app.use('/api/incidente', require('./routes/incidente.routes'));
 app.use('/api/usuario', require('./routes/usuario.routes'));
 
+app.get('/', (req, res) => res.json({ servicio: 'API Sistema de Incidentes ATU', estado: 'activo' }));
 app.get('/api/health', (req, res) => res.json({ status: 'ok' }));
 
 const PORT = process.env.PORT || 3000;
